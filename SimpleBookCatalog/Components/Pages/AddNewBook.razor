@@ -1,0 +1,22 @@
+﻿@page "/add-new"
+@inject IBookRepository bookRepository
+
+@inject NavigationManager navigation
+
+<PageTitle> Add New Books</PageTitle>
+
+<div class="row justify-content-center">
+    <div class="col-6">
+        <BookFrom IsEditMode="false" OnvalidBookSubmit="AddBook"/>
+    </div>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    public Book book { get; set; } = new();
+    private async Task AddBook(Book book){
+        await bookRepository.AddSync(book);
+        //navigation.NavigateTo("/booklist");
+        navigation.NavigateTo("/");
+    }
+}

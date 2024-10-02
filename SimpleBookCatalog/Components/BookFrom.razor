@@ -1,0 +1,86 @@
+﻿@inject IBookRepository Repository
+
+@if(book is not null)
+{
+    <EditForm Enhance="true" method="post" OnValidSubmit="AddOrEditBook" FormName="AddOrEditbookfrom" Model="book">
+        <h3>@Title</h3>
+        @if (IsEditMode)
+        {
+            <input type="hidden" name="Book.Id" value="@book.Id" />
+        }
+       
+        <div class="mb-3">
+            <label for="title" class="form-label">
+                Title
+            </label>
+            <InputText id="title" @bind-Value="book.Title" class="form-control shadow-none" />
+        </div>
+        <div class="mb-3">
+            <label for="author" class="form-label">
+                Author
+            </label>
+            <InputText id="author" @bind-Value="book.AuthorName" class="form-control shadow-none" />
+        </div>
+        <div class="mb-3">
+            <label for="pubication-date" class="form-label">
+                Date published
+            </label>
+            <InputDate id="pubication-date" @bind-Value="book.PublicationDate" class="form-control shadow-none" />
+        </div>
+        <div class="mb-3">
+            <label for="catagory" class="form-label">
+                Catagory
+            </label>
+            <InputSelect id="catagory" @bind-Value="book.CatagoryType" class="form-control shadow-none">
+                <option value="0">
+                    Select Catagory
+                </option>
+                @foreach (var catagory in Enum.GetValues(typeof(Catagory)))
+                {
+                    <option value="@catagory">
+                        @catagory.ToString()
+                    </option>
+                }
+            </InputSelect>
+
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary shadow-none"> Submit</button>
+            <a href="/" class=" btn btn-secondary shadow-none ms-3">
+                Back to List
+            </a>
+        </div>
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public bool IsEditMode { get; set; } = false;
+    [Parameter]
+    public int BookId { get; set; }
+    [SupplyParameterFromForm]
+    public Book? book { get; set; }
+
+    [Parameter]
+    public EventCallback<Book> OnvalidBookSubmit{ get; set; }
+    private string Title => IsEditMode ? $"Edit Book{BookId}" : $"Add New Book {BookId}";
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (IsEditMode)
+        {
+            book ??= await Repository.GetByIdAsync(BookId);
+        }
+        else
+        {
+            book ??= new();
+        }
+
+    }
+    private async Task AddOrEditBook()
+    {
+        await OnvalidBookSubmit.InvokeAsync(book);
+    }
+}

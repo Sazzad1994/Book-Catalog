@@ -1,0 +1,45 @@
+﻿@page "/BookList"
+@* @attribute [StreamRendering] *@
+<PageTitle> 
+    Book List
+    </PageTitle>
+
+<div class="row justify-content-center">
+    <div class="col-6">
+        <a href="add-new" class="btn btn-primary shadow-none mb-3"> Add New</a>
+        @if (books == null)
+        {
+            <div class="book-item">
+                loading books.please wait...
+            </div>
+        }
+        else if (books.Any())
+        {
+            @foreach (var book in books)
+            {
+                <div class="book-item">
+                    <BookCard Book="book"/>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="book-item">
+                No Books found..
+            </div>
+        }
+
+
+
+    </div>
+</div>
+@code {
+    private List<Book>? books;
+
+    protected override async OnInitializedAsync()
+    {
+        // await Task.Delay(3000);
+        books = await Repository.GetAllBook();
+
+    }
+}

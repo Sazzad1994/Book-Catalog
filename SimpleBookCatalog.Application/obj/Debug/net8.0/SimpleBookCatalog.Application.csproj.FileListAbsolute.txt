@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\bin\Debug\net8.0\SimpleBookCatalog.Application.deps.json
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\bin\Debug\net8.0\SimpleBookCatalog.Application.runtimeconfig.json
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\bin\Debug\net8.0\SimpleBookCatalog.Application.dll
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\bin\Debug\net8.0\SimpleBookCatalog.Application.pdb
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\bin\Debug\net8.0\SimpleBookCatalog.Domain.dll
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\bin\Debug\net8.0\SimpleBookCatalog.Domain.pdb
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\obj\Debug\net8.0\SimpleBookCatalog.Application.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\obj\Debug\net8.0\SimpleBookCatalog.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\obj\Debug\net8.0\SimpleBookCatalog.Application.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\obj\Debug\net8.0\SimpleBookCatalog.Application.AssemblyInfo.cs
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\obj\Debug\net8.0\SimpleBookCatalog.Application.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\obj\Debug\net8.0\SimpleBo.1B9AC495.Up2Date
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\obj\Debug\net8.0\SimpleBookCatalog.Application.dll
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\obj\Debug\net8.0\refint\SimpleBookCatalog.Application.dll
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\obj\Debug\net8.0\SimpleBookCatalog.Application.pdb
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\obj\Debug\net8.0\SimpleBookCatalog.Application.genruntimeconfig.cache
+C:\Users\User\source\repos\Simple Book Catalog\SimpleBookCatalog.Application\obj\Debug\net8.0\ref\SimpleBookCatalog.Application.dll
